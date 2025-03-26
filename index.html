@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>[Your Name] - Game Developer</title>
+
+  <!-- Bootstrap & Fonts -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+
+  <!-- Styles -->
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #0d1117;
+      color: #f0f0f0;
+      scroll-behavior: smooth;
+    }
+    .navbar {
+      background-color: #111827;
+    }
+    .navbar-brand {
+      font-weight: bold;
+      color: #58a6ff !important;
+    }
+    .nav-link {
+        color: white;
+    }
+    .card-body {
+        flex: 1;
+    }
+    .hero {
+      height: 100vh;
+      background: url('https://wallpaperaccess.com/full/39617.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      text-align: center;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.7);
+    }
+    .hero .container {
+      position: relative;
+      z-index: 2;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+    .btn-glass {
+      border: 1px solid #fff;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      color: #fff;
+      padding: 10px 30px;
+      border-radius: 30px;
+      transition: all 0.3s ease;
+    }
+    .btn-glass:hover {
+      background: rgba(255, 255, 255, 0.3);
+      color: #000;
+    }
+
+    /* Sections */
+    section {
+      padding: 80px 0;
+    }
+    .bg-dark-section {
+      background-color: #161b22;
+    }
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+      font-weight: 600;
+      font-size: 2rem;
+    }
+    /* .card-text{
+        color:white;
+    }
+    .card-title{
+        font-weight: bold;
+        color:white;
+    } */
+    .card-title {
+    font-size: 2rem; /* Larger font size for the title */
+    font-weight: 700; /* Bold for the title */
+    letter-spacing: 1px; /* Slightly increase letter spacing */
+    margin: 20px 0; /* Top and bottom margin */
+    color: #fff; /* White color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Shadow for depth */
+}
+
+/* Card Text */
+.card-text {
+    font-size: 1.1rem; /* Slightly larger text for readability */
+    font-weight: 400; /* Normal weight for body text */
+    line-height: 1.6; /* Better line spacing for readability */
+    color: rgba(255, 255, 255, 0.85); /* Lighter white text */
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Slight shadow for legibility */
+}
+
+    /* Project Cards */
+    .project-card {
+      background: #1c1c1e;
+      border: none;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+    .project-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    /* Skills */
+    .skill-icon {
+      font-size: 3rem;
+      color: #58a6ff;
+      margin-bottom: 10px;
+    }
+
+    /* Contact */
+    .form-control,
+    .btn-primary {
+      border-radius: 20px;
+    }
+
+    footer {
+      background: #0a0a0c;
+      color: #aaa;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">Portfolio</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+        <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+        <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container text-white">
+    <h1>Hello, I'm Narek</h1>
+    <p>Game Developer | Unity & Unreal </p>
+    <a href="#projects" class="btn btn-glass mt-3">View Projects</a>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="bg-dark-section text-white">
+  <div class="container">
+    <h2 class="section-title">About Me</h2>
+    <div class="row align-items-center">
+      <div class="col-md-4" data-aos="fade-right">
+        <img src="Screenshot_20240125_213318.jpg" alt="Your Photo" class="img-fluid rounded shadow" />
+      </div>
+      <div class="col-md-8" data-aos="fade-left">
+        <p>I’m a game developer with experience in both Unity and Unreal Engine, proficient in C# and C++. I’ve worked at HendoGames and now work as a freelancer. My expertise spans various aspects of game development, from coding to designing interactive gameplay. </p>
+        <p> I’m always ready to take on new challenges and create engaging, high-quality gaming experiences. Whether working solo or collaborating with teams, I’m passionate about bringing unique and immersive games to life.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="text-white">
+  <div class="container">
+    <h2 class="section-title">Projects</h2>
+    
+    <div class="row g-4">
+      <div class="col-md-4" data-aos="zoom-in">
+        <div class="card project-card">
+          <img src="CubeRun.webp" alt="Game 1">
+          <div class="card-body">
+            <h5 class="card-title">Cube Run</h5>
+            <p class="card-text">In this 3D cube puzzle game, the player must solve increasingly complex levels by strategically using three different cubes. Each cube has unique properties or abilities that can help the player overcome obstacles, such as changing size, shifting colors, or interacting with the environment in different ways. The player must think logically and plan their moves carefully, as each level presents new challenges that require the cubes to work together in creative ways to unlock paths, activate switches, or break barriers. The game encourages critical thinking and problem-solving, with each level requiring a new approach to progress. The 3D environment adds depth to the puzzles, providing a rich, immersive experience for players who enjoy logical challenges. <br><br><br></p>
+            <a href="https://www.youtube.com/watch?v=Ovqs4jqNyks" class="btn btn-outline-light btn-sm">Video link</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="card project-card">
+          <img src="OnlineShooter.jpg" alt="Game 2">
+          <div class="card-body">
+            <h5 class="card-title">Online Shooter</h5>
+            <p class="card-text">In this cinematic AAA-quality game scene, soldiers find themselves fighting for survival against a relentless horde of zombies in a ruined city at dusk. The battle centers around a battle-worn BTR-82A, reinforced with sandbags and makeshift armor, as it becomes the last line of defense. Soldiers take cover behind debris, unleashing gunfire to hold back the undead. The horde is overwhelming, with some zombies sprinting toward the soldiers, while others are grotesquely mutated, including a massive juggernaut clad in riot gear. The chaos is heightened by explosions, fires, and tracer rounds lighting up the smoke-filled battlefield. Distant helicopters and drones fly overhead, scanning the devastation. The atmosphere is one of pure tension, as the soldiers face an impossible fight in a desperate last-stand survival scenario.</p>
+            <a href="https://www.youtube.com/watch?v=CS2aa3_jh3g" class="btn btn-outline-light btn-sm">Video link</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="card project-card">
+          <img src="WhispersInTheVoid.jpg" alt="Game 3">
+          <div class="card-body">
+            <h5 class="card-title">Whispers In The Void</h5>
+            <p class="card-text">Whispers in the Void is a psychological horror game set in a dark, atmospheric universe. The player takes on the role of a lone protagonist, trapped within a mysterious and seemingly endless void. As they navigate through this eerie space, they uncover fragmented memories and cryptic messages, all while being pursued by sinister forces that lurk in the darkness. The game focuses on exploration, puzzle-solving, and survival, with a heavy emphasis on narrative and atmosphere. The deeper the player ventures into the void, the more unsettling the environment becomes, as reality bends and distorts, leading to a descent into madness. With minimal combat, the game relies on tension, auditory cues, and visual storytelling to create a chilling experience. Each whisper in the void draws the player closer to uncovering the truth, but at what cost to their sanity?</p>
+            <a href="https://store.steampowered.com/app/2812240/Whispers_in_the_Void/" class="btn btn-outline-light btn-sm">Video link</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br><br>
+    <div class="row g-4">
+        <div class="col-md-4" data-aos="zoom-in">
+          <div class="card project-card">
+            <img src="TowerDefence.jpg" alt="Game 1">
+            <div class="card-body">
+              <h5 class="card-title">Tower Defence</h5>
+              <p class="card-text">In this 2D tower defense game, enemies aim to destroy your castle, and your goal is to stop them by strategically placing turrets along their path. The turrets have a simple but crucial difference: some fire faster, while others fire slower. Each turret type must be positioned wisely to maximize damage, as faster-firing turrets can quickly take down weaker enemies, while slower-firing turrets may be better for taking out tougher foes. As waves of enemies increase in strength and numbers, you'll need to adjust your strategy and turret placements to ensure your castle remains safe. It's a fast-paced game of timing and strategy to prevent the enemy from reaching and destroying your castle.</p>
+              <a href="https://www.youtube.com/watch?v=x0XVJxnol4Y" class="btn btn-outline-light btn-sm">Video link</a>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="bg-dark-section text-white">
+  <div class="container text-center">
+    <h2 class="section-title">Skills & Tools</h2>
+    <div class="row justify-content-center mt-4">
+      <div class="col-4 col-md-2 mb-4"><i class="fab fa-unity skill-icon"></i><p>Unity</p></div>
+      <div class="col-4 col-md-2 mb-4"><i class="fas fa-cube skill-icon"></i><p>Unreal</p></div>
+      <div class="col-4 col-md-2 mb-4"><i class="fab fa-cuttlefish skill-icon"></i><p>C# / C++</p></div>
+      <div class="col-4 col-md-2 mb-4"><i class="fas fa-code-branch skill-icon"></i><p>Git</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="text-white bg-dark-section">
+    <div class="container text-center">
+      <h2 class="section-title">Contact Me</h2>
+      <p class="mb-3">I’m open to freelance work, collaborations, or full-time roles in game development!</p>
+      
+      <div class="mb-3">
+        <i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:yourname@example.com" class="text-info">narekkarapetyan015@gmail.com</a>
+      </div>
+      
+      <div class="mb-3">
+        <i class="fas fa-phone-alt"></i> <strong>Phone:</strong> <span>+374 55 250 800</span>
+      </div>
+      
+      <div class="mb-3">
+        <i class="fab fa-github"></i> <strong>GitHub:</strong> <a href="https://github.com/nkarapet42" target="_blank" class="text-info">github.com/nkarapet42</a>
+      </div>
+      
+      <div class="mb-3">
+        <i class="fab fa-linkedin"></i> <strong>LinkedIn:</strong> <a href="www.linkedin.com/in/narek-karapetyan-301437332" target="_blank" class="text-info">linkedin.com/in/narek-karapetyan-301437332</a>
+      </div>
+      
+      <div>
+         <strong>CV</strong> <span><a style="color: #58a6ff;" href="Narek_Karapetyan_CV.pdf" class="" download>Download Resume</a>
+        </span>
+      </div>
+    </div>
+  </section>
+  
+
+<!-- Footer -->
+<footer>
+  <p>© 2025 Narek Karapetyan — Game Dev Portfolio</p>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
+
+</body>
+</html>
